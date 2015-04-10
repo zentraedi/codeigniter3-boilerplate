@@ -481,26 +481,6 @@ $config['time_reference'] = 'local';
 $config['rewrite_short_tags'] = FALSE;
 
 /*
-| -------------------------------------------------------------------
-|  Native Auto-load
-| -------------------------------------------------------------------
-|
-| Nothing to do with config/autoload.php, this allows PHP autoload to work
-| for base controllers and some third-party libraries.
-|
-*/
-function __autoload($class)
-{
- if(strpos($class, 'CI_') !== 0)
- {
-  @include_once( APPPATH . 'core/'. $class . EXT );
- }
-}
-
-$config['modules_locations'] = array(APPPATH.'modules/' => '../modules/');
-
-
-/*
 |--------------------------------------------------------------------------
 | Reverse Proxy IPs
 |--------------------------------------------------------------------------
