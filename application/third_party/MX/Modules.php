@@ -6,7 +6,7 @@ global $CFG;
 
 if(!defined('SPARKPATH'))
 {
-	define('SPARKPATH', APPPATH.'sparks/');
+	define('SPARKPATH', FCPATH.'sparks/');
 }
 
 /* get module locations from config settings or use the default module location and offset */
