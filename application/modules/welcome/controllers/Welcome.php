@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends MX_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +20,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		// $this->load->view('welcome_message');
+		// // Some example data
+    $data['title'] = "The Smarty parser works!";
+    $data['body']  = "This is body text to show that the Smarty Parser works!";
+
+    // Load the template from the views directory
+    $this->parser->parse("smartytest.tpl", $data);
 	}
 }
